@@ -1,0 +1,65 @@
+// Grid table component variables
+$grid-table-generate-scheme: true;
+
+/* Grid table component prototype */
+ul.grid-table {
+	background-color: $bg-color;
+	border-radius: $border-radius;
+	border: 1px solid $border-color;
+	margin-bottom: $element-margin;
+
+	> li.grid-table-cell {
+		padding: $box-padding;
+
+		&:not(.is-first-row) {
+			border-top: 1px solid $border-color;
+		}
+
+		&:not(.is-first-column) {
+			border-left: 1px solid $border-color;
+		}
+
+		&.is-first-column.is-first-row {
+			border-radius: $border-radius 0 0 0;
+		}
+
+		&.is-last-column.is-first-row {
+			border-radius: 0 $border-radius 0 0;
+		}
+
+		&.is-first-column.is-last-row {
+			border-radius: 0 0 0 $border-radius;
+		}
+
+		&.is-last-column.is-last-row {
+			border-radius: 0 0 $border-radius 0;
+		}
+
+		> :last-child,
+		> :last-child > :last-child,
+		> :last-child > :last-child > :last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* Grid table component extensions */
+ul.grid-table {
+}
+
+/* Grid table component scheme modifications */
+@each $scheme in map-keys($schemes) {
+	@if (map-val($schemes, $scheme, generate-scheme) and $grid-table-generate-scheme) {
+		&.scheme--#{$scheme} {
+
+			ul.grid-table {
+				background-color: transparent;
+				border-color: map-val($schemes, $scheme, border-color);
+
+				> li.grid-table-cell {
+					border-color: map-val($schemes, $scheme, border-color);
+				}
+			}
+		}
+	}
+}
