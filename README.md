@@ -14,8 +14,8 @@ You will also need to place `grid-table.js` to `/assets/js` directory and add it
 
 Class name | Description | Example
 ---------- | ----------- | -------
-`grid-table` | Applies a grid table. | `<ul class="grid-table"></ul>`
-`grid-table-cell` | Applies a grid table cell. | `<li class="grid-table-cell"></li>`
+`grid-table` | Applies a grid table. | `<ul class="grid-table grid"></ul>`
+`grid-table-cell` | Applies a grid table cell. | `<li class="grid-table-cell grid-col"></li>`
 
 ### Examples
 

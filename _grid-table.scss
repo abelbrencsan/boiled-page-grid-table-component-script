@@ -2,13 +2,13 @@
 $grid-table-generate-scheme: true;
 
 /* Grid table component prototype */
-ul.grid-table {
+ul.grid-table.grid {
 	background-color: $bg-color;
 	border-radius: $border-radius;
 	border: 1px solid $border-color;
 	margin-bottom: $element-margin;
 
-	> li.grid-table-cell {
+	> li.grid-table-cell.grid-col {
 		padding: $box-padding;
 
 		&:not(.is-first-row) {
@@ -44,7 +44,7 @@ ul.grid-table {
 }
 
 /* Grid table component extensions */
-ul.grid-table {
+ul.grid-table.grid {
 }
 
 /* Grid table component scheme modifications */
@@ -52,11 +52,11 @@ ul.grid-table {
 	@if (map-val($schemes, $scheme, generate-scheme) and $grid-table-generate-scheme) {
 		&.scheme--#{$scheme} {
 
-			ul.grid-table {
+			ul.grid-table.grid {
 				background-color: transparent;
 				border-color: map-val($schemes, $scheme, border-color);
 
-				> li.grid-table-cell {
+				> li.grid-table-cell.grid-col {
 					border-color: map-val($schemes, $scheme, border-color);
 				}
 			}
