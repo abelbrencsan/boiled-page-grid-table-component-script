@@ -14,8 +14,7 @@ You will also need to place `grid-table.js` to `/assets/js` directory and add it
 
 Class name | Description | Example
 ---------- | ----------- | -------
-`grid-table` | Applies a grid table. | `<ul class="grid-table grid"></ul>`
-`grid-table-cell` | Applies a grid table cell. | `<li class="grid-table-cell grid-col"></li>`
+`grid-table` | Applies a grid table. Use grid component for alignment. | `<ul class="grid-table grid"></ul>`
 
 ### Examples
 
@@ -25,15 +24,15 @@ The following example shows a three-column grid table by default, where columns 
 
 ```html
 <ul class="grid-table grid" data-grid-table>
-  <li class="grid-table-cell grid-col grid-col--1of3 grid-col--small--full" data-grid-table-cell>
+  <li class="grid-col grid-col--1of3 grid-col--small--full" data-grid-table-cell>
     <h2 class="h6">Lorem ipsum dolor amet</h2>
     <p>Maiores quaerat exercitationem provident et tempora.</p>
   </li>
-  <li class="grid-table-cell grid-col grid-col--1of3 grid-col--small--full" data-grid-table-cell>
+  <li class="grid-col grid-col--1of3 grid-col--small--full" data-grid-table-cell>
     <h2 class="h6">Lorem ipsum dolor amet</h2>
     <p>Maiores quaerat exercitationem provident et tempora.</p>
   </li>
-  <li class="grid-table-cell grid-col grid-col--1of3 grid-col--small--full" data-grid-table-cell>
+  <li class="grid-col grid-col--1of3 grid-col--small--full" data-grid-table-cell>
     <h2 class="h6">Lorem ipsum dolor amet</h2>
     <p>Maiores quaerat exercitationem provident et tempora.</p>
   </li>
