@@ -50,7 +50,7 @@ ul.grid-table.grid {
 /* Grid table component scheme modifications */
 @each $scheme in map-keys($schemes) {
 	@if (map-val($schemes, $scheme, generate-scheme) and $grid-table-generate-scheme) {
-		&.scheme--#{$scheme} {
+		.scheme--#{$scheme} {
 
 			ul.grid-table.grid {
 				background-color: transparent;
